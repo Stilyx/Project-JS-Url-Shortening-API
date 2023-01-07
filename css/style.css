@@ -632,18 +632,13 @@ footer {
   }
 
   .addLink::after {
-    content: url(../images/main-paths/path-direito.png);
-
-    position: absolute;
-    size: 30px;
-    left: 0;
-    bottom: -10px;
-    z-index: 2;
+    content: none;
   }
 
   .addLink::before {
     content: url(../images/main-paths/path-esquerdo.png);
     position: absolute;
+    height: 250px;
     right: 0;
     z-index: 1;
   }
@@ -697,5 +692,28 @@ footer {
 
   .item-li {
     margin-bottom: 10px;
+  }
+
+  .letBoost::after {
+    content: none;
+  }
+
+  .letBoost::before {
+    content: url(../images/footer-paths/path-footer-down.png);
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    height: 100px;
+    z-index: 1;
+  }
+
+  .footer-title::before {
+    content: url(../images/footer-paths/path-footer-right.png);
+    position: absolute;
+    height: 10px;
+    width: 400px;
+    right: 0;
+    top: 0px;
+    z-index: -1;
   }
 }
