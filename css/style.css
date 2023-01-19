@@ -201,7 +201,7 @@ header {
   z-index: 1;
 }
 
-.input-email {
+.input-link {
   z-index: 3;
   width: 70%;
   height: 110px;
@@ -211,20 +211,39 @@ header {
   gap: 10px;
 }
 
-.input-email small {
+.input-link small {
   opacity: 0;
 }
 
-.input-email input {
+.input-link.error small {
+  color: red;
+}
+
+.input-link.error input {
+  outline: 2px solid red;
+}
+
+.input-link.error input:focus {
+  outline: 2px solid red;
+}
+
+.input-link.sucess small {
+  color: #2bd0d0;
+}
+
+.input-link.sucess input {
+  outline: 2px solid #2bd0d0;
+}
+
+.input-link.sucess input:focus {
+  outline: 2px solid #2bd0d0;
+}
+
+.input-link input {
   width: 100%;
   padding: 16px;
   border-radius: 10px;
   border: none;
-}
-
-.addLink input:focus {
-  border: none;
-  outline: none;
 }
 
 .urlButton {
@@ -243,25 +262,51 @@ header {
 }
 
 .links-content {
-  padding: 10px;
-  display: flex;
-  margin: 0 auto;
-  border-radius: 10px;
-  height: 72px;
   width: 80%;
-  align-items: center;
-  justify-content: space-between;
-  background-color: white;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.219);
-  margin-bottom: 100px;
-}
-
-.link-to-generate {
-  margin-left: 10px;
+  max-height: 380px;
+  overflow-x: auto;
+  overflow-x: hidden;
+  margin: 10px auto 10px auto;
+  padding-right: 10px;
 }
 
 .newlink-copy {
-  margin: 30px;
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.219);
+  margin-right: 30px;
+  margin-bottom: 25px;
+}
+
+.links-content::-webkit-scrollbar {
+  width: 10px;
+  background: rgba(255, 255, 255, 0.548);
+}
+
+.links-content::-webkit-scrollbar-thumb {
+  background: #9ae3e3;
+  border-radius: 5px;
+}
+
+.links-content::-webkit-scrollbar-thumb:hover {
+  background: #9ae3e39f;
+  cursor: pointer;
+}
+
+.generate-link-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.link-to-generate {
+  width: 90%;
 }
 
 .newlink-copy a {
@@ -315,6 +360,7 @@ header {
 .advanced-boxs {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   margin: 0 auto 120px auto;
   width: 80%;
   height: 399px;
@@ -610,14 +656,26 @@ footer {
   .links-content {
     display: flex;
     flex-direction: column;
-    height: 155px;
+    height: auto;
   }
 
   .link-to-generate {
     text-align: left;
     width: 100%;
-    padding-bottom: 8px;
+    padding-bottom: 15px;
     border-bottom: 1px solid #9e9aa8;
+  }
+
+  .generate-link-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+  }
+
+  .button-copy {
+    align-self: center;
+    justify-content: center;
+    width: 100%;
   }
 
   .newlink-copy {
