@@ -215,30 +215,6 @@ header {
   opacity: 0;
 }
 
-.input-link.error small {
-  color: red;
-}
-
-.input-link.error input {
-  outline: 2px solid red;
-}
-
-.input-link.error input:focus {
-  outline: 2px solid red;
-}
-
-.input-link.sucess small {
-  color: #2bd0d0;
-}
-
-.input-link.sucess input {
-  outline: 2px solid #2bd0d0;
-}
-
-.input-link.sucess input:focus {
-  outline: 2px solid #2bd0d0;
-}
-
 .input-link input {
   width: 100%;
   padding: 16px;
