@@ -239,6 +239,7 @@ header {
 
 .links-content {
   width: 80%;
+  height: auto;
   max-height: 380px;
   overflow-x: auto;
   overflow-x: hidden;
@@ -282,12 +283,14 @@ header {
 }
 
 .link-to-generate {
-  width: 90%;
+  width: 60%;
+  word-wrap: break-word;
 }
 
 .newlink-copy a {
   margin-right: 10px;
   color: #2bd0d0;
+  height: auto;
 }
 
 .newlink-copy button {
@@ -633,16 +636,19 @@ footer {
     display: flex;
     flex-direction: column;
     height: auto;
+    width: 80%;
   }
 
   .link-to-generate {
     text-align: left;
-    width: 100%;
+    width: 80%;
+    word-wrap: break-word;
     padding-bottom: 15px;
     border-bottom: 1px solid #9e9aa8;
   }
 
   .generate-link-content {
+    height: auto;
     display: flex;
     flex-direction: column;
     padding-top: 20px;
